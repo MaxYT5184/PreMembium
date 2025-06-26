@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Community Ratings - PreMembium</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
   <header>
@@ -58,14 +57,14 @@
     </div>
 
     <h2>Leave Your Feedback</h2>
-    <form id="feedbackForm">
+    <form action="https://formspree.io/f/mrbkonpa" method="POST">
       <label for="username">Name:</label><br>
-      <input type="text" id="username" required><br><br>
+      <input type="text" id="username" name="username" required><br><br>
 
       <label for="feedback">Your Feedback:</label><br>
-      <textarea id="feedback" rows="5" required></textarea><br><br>
+      <textarea id="feedback" name="feedback" rows="5" required></textarea><br><br>
 
-      <div class="g-recaptcha" data-sitekey="invisible" data-size="invisible"></div>
+      <input type="hidden" name="_captcha" value="false" />
       <button type="submit">Submit Feedback</button>
     </form>
   </main>
@@ -74,12 +73,6 @@
     <p>&copy; 2025 PreMembium. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("Feedback submitted successfully! [Simulated]");
-    });
-  </script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
