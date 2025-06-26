@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PreMembium</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="PreMembium Logo" />
+        <span>PreMembium</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Our Community</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="Rating.html">Rates</a></li>
+        <li><a href="giveaways.html">Giveaways</a></li>
+        <li><a href="https://discord.gg/XJR4wcNRdA" target="_blank" class="join-button">Join Us</a></li>
+      </ul>
+      <div class="mobile-menu" onclick="toggleMenu()">
+        <span>&#9776;</span>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding: 30px;">
+    <h1>Contact Us</h1>
+    <form id="contactForm" action="#" method="POST">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <div class="g-recaptcha" data-sitekey="invisible" data-size="invisible"></div>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PreMembium. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Message sent successfully! [Simulated]");
+    });
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
