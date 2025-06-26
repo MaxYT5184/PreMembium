@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Ratings - PreMembium</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="PreMembium Logo" />
+        <span>PreMembium</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Our Community</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="Rating.html">Rates</a></li>
+        <li><a href="giveaways.html">Giveaways</a></li>
+        <li><a href="https://discord.gg/XJR4wcNRdA" target="_blank" class="join-button">Join Us</a></li>
+      </ul>
+      <div class="mobile-menu" onclick="toggleMenu()">
+        <span>&#9776;</span>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding: 30px;">
+    <h1>What People Are Saying</h1>
+    <div class="ratings">
+      <div class="rating">
+        <img src="../assets/img/profile1.png" alt="User 1" />
+        <p><strong>NovaDev:</strong> "Best service to boost our Discord server. 10/10!"</p>
+      </div>
+      <div class="rating">
+        <img src="../assets/img/profile2.png" alt="User 2" />
+        <p><strong>PixelCraft:</strong> "Real members joined within hours. Loved it!"</p>
+      </div>
+      <div class="rating">
+        <img src="../assets/img/profile3.png" alt="User 3" />
+        <p><strong>ArtsyGalaxy:</strong> "Their giveaways helped our server grow instantly."</p>
+      </div>
+      <div class="rating">
+        <img src="../assets/img/profile4.png" alt="User 4" />
+        <p><strong>CodeKing:</strong> "Honest service and helpful mods. Highly recommended."</p>
+      </div>
+      <div class="rating">
+        <img src="../assets/img/profile5.png" alt="User 5" />
+        <p><strong>Skybound:</strong> "Perfect for small Discord communities to grow."</p>
+      </div>
+      <div class="rating">
+        <img src="../assets/img/profile6.png" alt="User 6" />
+        <p><strong>BeastBot:</strong> "Fast results, great communication. 5 stars!"</p>
+      </div>
+    </div>
+
+    <h2>Leave Your Feedback</h2>
+    <form id="feedbackForm">
+      <label for="username">Name:</label><br>
+      <input type="text" id="username" required><br><br>
+
+      <label for="feedback">Your Feedback:</label><br>
+      <textarea id="feedback" rows="5" required></textarea><br><br>
+
+      <div class="g-recaptcha" data-sitekey="invisible" data-size="invisible"></div>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PreMembium. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Feedback submitted successfully! [Simulated]");
+    });
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
